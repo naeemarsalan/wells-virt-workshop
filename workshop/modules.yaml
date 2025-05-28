@@ -19,8 +19,6 @@ modules:
         name: OpenShift Virtualization Basics
     04_vmware-compare:
         name: VMware vs. OpenShift Virtualization
-    04_thanks:
-        name: Thank you and next steps
     05_ocpv_customization:
         name: Customize Virtual Machines
     06_windows_vm:

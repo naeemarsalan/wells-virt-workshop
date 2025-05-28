@@ -17,20 +17,20 @@ modules:
         name: OpenShift Container Platform Basics
     03_ocpv_basics:
         name: OpenShift Virtualization Basics
+    04_vmware-compare:
+        name: VMware vs. OpenShift Virtualization
     04_thanks:
         name: Thank you and next steps
     05_ocpv_customization:
-        name: 'Optional: Customize Virtual Machines'
+        name: Customize Virtual Machines
     06_windows_vm:
-        name: 'Optional: Windows Virtual Machines'
-    07_bare_metal:
-        name: 'Optional: Bare Metal OpenShift Overview'
+        name: Windows Virtual Machines
     08_network_management:
-        name: 'Optional: Network Management'
+        name: 'Network Management'
     09_storage_management:
-        name: 'Optional: Storage Management'
+        name: 'Storage Management'
     10_backup_restore:
-        name: 'Optional: Backup and Restore'
+        name: 'Backup and Restore'
     11_service_route:
         name: 'Optional: Exposing apps using a Route'
     12_metallb:

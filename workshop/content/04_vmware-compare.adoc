@@ -1,0 +1,35 @@
+:scrollbar:
+:toc2:
+:numbered:
+
+== OpenShift Virt Explained as a VMware Admin
+
+=== ESXi vs KVM
+
+OpenShift Virtualization is built on top of the KVM hypervisor, which is a part of the Linux kernel. This means that it uses the same underlying technology as VMware ESXi, but it is integrated into the OpenShift platform. Redhat is not new to virtualization, they have been using KVM for a long time, and OpenShift Virtualization is the next step in that evolution.
+
+Kubevirt is the component that provides the virtualization capabilities in OpenShift. It is responsible for managing the lifecycle of virtual machines, including creating, starting, stopping, and deleting them. Kubevirt uses the Kubernetes API to manage virtual machines, which means that it can take advantage of all the features of Kubernetes, such as scaling, rolling updates, and self-healing.
+
+=== vCenter vs OpenShift Console
+
+The OpenShift Console is the web-based user interface for managing OpenShift clusters, including OpenShift Virtualization. It provides a similar experience to vCenter, but it is designed to work with Openshift.Kubernetes and Kubevirt.
+The OpenShift Console allows you to create, manage, and monitor virtual machines, as well as view their performance metrics and logs. It also provides a way to manage the underlying infrastructure, such as nodes and storage.
+
+=== vSan vs OpenShift Storage CSI
+
+OpenShift Virtualization uses the Container Storage Interface (CSI) to manage storage for virtual machines. This is similar to how vSAN works in VMware, but it is designed to work with Kubernetes and Kubevirt.
+CSI is an API specification for the management of container storage across different container orchestration (CO) systems. You can manage the storage volumes within the container native environments, without having specific knowledge of the underlying storage infrastructure. With the CSI, storage works uniformly across different container orchestration systems, regardless of the storage vendors you are using. For more information about CSI, see Using Container Storage Interface (CSI).
+
+=== vMotion vs Live Migration
+
+Live migration is the process of moving a running virtual machine instance (VMI) to another node in the cluster without interrupting the virtual workload or access. If a VMI uses the LiveMigrate eviction strategy, it automatically migrates when the node that the VMI runs on is placed into maintenance mode. You can also manually start live migration by selecting a VMI to migrate. By default, live migration traffic is encrypted using Transport Layer Security (TLS).
+
+=== vSwitch/NSX vs OpenShift SDN/OVN
+
+OpenShift Virtualization uses Open Virtual Network (OVN) to provide networking for virtual machines. OVN is a network virtualization solution that is built on top of Open vSwitch (OVS). It provides a way to create virtual networks that can span multiple nodes in the cluster, similar to how vSwitch and NSX work in VMware.
+OVN provides a way to create virtual networks that can span multiple nodes in the cluster, similar to how vSwitch and NSX work in VMware. It also provides a way to manage network policies, such as firewall rules and access control lists (ACLs), for virtual machines.
+
+=== vSphere Templates vs OpenShift Templates
+OpenShift Virtualization uses templates to create virtual machines, similar to how vSphere templates work in VMware. Templates are pre-configured virtual machine images that can be used to create new virtual machines. They can include operating system images, applications, and other software that is required to run the virtual machine.
+Templates can be used to create new virtual machines quickly and easily, without having to configure each virtual machine individually. OpenShift Virtualization also supports importing existing virtual machine images from other virtualization platforms, such as VMware, using the Container Image Importer (CII) tool.
+

@@ -4,6 +4,17 @@
 
 = OpenShift Basics
 
-For openshift basics, its reocmmend to use the OpenShift Basics workshop available at https://workshop.k8socp.com/[OpenShift Basics].
-This workshop covers the basic concepts of OpenShift, including how to create and manage projects, users, and roles. It is intended for those who are new to OpenShift and want to learn the basics.
+For openshift basics, its recommend to use the OpenShift Basics workshop available at https://workshop.k8socp.com/[OpenShift Basics].
+This workshop covers the basic concepts of OpenShift, including:
+* Understanding OpenShift architecture
+* Working with projects
+* Managing applications
+* Deploying applications
+* Scaling applications
+* Monitoring applications
+* Troubleshooting applications
+* Using the OpenShift CLI
+* Using the OpenShift web console
+* Using OpenShift operators
+* Using OpenShift pipelines
 

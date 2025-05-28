@@ -3,7 +3,7 @@ name: Red Hat OpenShift Virtualization Roadshow
 modules:
     activate:
     - 01_welcome
-    - 02_migrate_vms
+    - 02_ocp_basics
     - 03_ocpv_basics
     - 04_thanks
     - 05_ocpv_customization

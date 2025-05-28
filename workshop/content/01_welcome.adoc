@@ -1,13 +1,28 @@
 :preinstall_operators: %preinstall_operators%
 
-== Welcome to the Red Hat OpenShift Virtualization Roadshow
+== Welcome Wells Fargo to the Red Hat OpenShift Virtualization. 
 
 OpenShift Virtualization enables you to bring virtual machines onto a modern, Kubernetes-based infrastructure. It enables the development and delivery of new applications as well as the modernization of existing ones and can create applications that consist of virtual machines, containers, and serverless functions - all managed together using Kubernetes-native tools and paradigms.
 
-This workshop has two segments which we encourage all attendees to complete:
+[NOTE]
 
-* _Migrating Virtual Machines_: In this section, you will use the Migration Toolkit for Virtualization (MTV) to migrate a few VMs from an existing VMware vSphere environment to OpenShift Virtualization.
-* _OpenShift Virtualization Basics_: This lab focuses on how to create and use virtual machines with OpenShift Virtualization. It covers the most common tasks you would be expected to perform as a VM user/administrator.
+We will not be covering installation of OpenShift Virtualization in this workshop. The environment is already set up for you, so you can focus on learning how to use OpenShift Virtualization.
+
+This workshop will cover the following topics: 
+
+* _Openshift Basic Concepts_: This workshop covers the basic concepts of OpenShift, including how to create and manage projects, users, and roles. It is intended for those who are new to OpenShift and want to learn the basics. https://workshop.k8socp.com/[OpenShift Basics] 
+
+* OpenShift Virtualization Basics_: This lab focuses on how to create and use virtual machines with OpenShift Virtualization. It covers the most common tasks you would be expected to perform as a VM user/administrator.
+
+* Comparing VMware concepts to OpenShift Virtualization_: This lab compares the concepts of VMware with those of OpenShift Virtualization. It is intended for those who are familiar with VMware and want to learn how to use OpenShift Virtualization.
+
+* High Level Overview of Architecture: This lab provides a high-level overview of the architecture of OpenShift Virtualization. It covers the components and how they interact with each other.
+
+* Storage with CSI_: This lab focuses on how to use Container Storage Interface (CSI) with OpenShift Virtualization. It covers how to create and manage storage for virtual machines.
+
+* Networking with OpenShift Virtualization_: This lab focuses on how to use networking with OpenShift Virtualization. It covers how to create and manage networks for virtual machines.
+
+* _Day 2 and Lifecycle management_: This lab focuses on how to manage the lifecycle of virtual machines with OpenShift Virtualization. It covers how to create, update, and delete virtual machines, as well as how to manage their resources.
 
 Additionally, there are a number of optional modules which target activities that you may be interested in depending on your specific role, responsibilities, and/or what you're curious about.
 

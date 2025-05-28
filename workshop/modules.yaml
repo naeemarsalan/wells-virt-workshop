@@ -13,8 +13,8 @@ config:
 modules:
     01_welcome:
         name: Welcome
-    02_migrate_vms:
-        name: Migrating Virtual Machines
+    02_ocp_basics:
+        name: OpenShift Container Platform Basics
     03_ocpv_basics:
         name: OpenShift Virtualization Basics
     04_thanks:

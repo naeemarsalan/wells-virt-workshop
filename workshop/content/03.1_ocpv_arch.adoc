@@ -1,0 +1,104 @@
+:scrollbar:
+:toc2:
+:numbered:
+
+== OpenShift Virtualization Architecture 
+
+After you install OpenShift Virtualization, the Operator Lifecycle Manager (OLM) deploys operator pods for each component of OpenShift Virtualization:
+
+== Compute: virt-operator
+
+The OpenShift Virtualization Operator, virt-operator, deploys, upgrades, and manages OpenShift Virtualization without disrupting current virtual machine (VM) workloads. In addition, the OpenShift Virtualization Operator deploys the common instance types and common preferences.
+
+Virt-Operator Components
+[cols="1,1"]
+|===
+|*Component* |*Description*
+
+|`deployment/virt-api`
+|HTTP API server that serves as the entry point for all virtualization-related flows.
+
+|`deployment/virt-controller`
+|Observes the creation of a new VM instance object and creates a corresponding pod. When the pod is scheduled on a node, `virt-controller` updates the VM with the node name.
+
+|`daemonset/virt-handler`
+|Monitors any changes to a VM and instructs `virt-launcher` to perform the required operations. This component is node-specific.
+
+|`pod/virt-launcher`
+|Contains the VM that was created by the user as implemented by `libvirt` and `qemu`.
+|===
+== Storage: cdi-operator
+The CDI Operator, cdi-operator, manages CDI and its related resources, which imports a virtual machine (VM) image into a persistent volume claim (PVC) by using a data volume. 
+
+CDI Operator components
+[cols="1,1"]
+|===
+|*Component* |*Description*
+
+|`deployment/cdi-apiserver`
+|Manages the authorization to upload VM disks into PVCs by issuing secure upload tokens.
+
+|`deployment/cdi-uploadproxy`
+|Directs external disk upload traffic to the appropriate upload server pod so that it can be written to the correct PVC. Requires a valid upload token.
+
+|`pod/cdi-importer`
+|Helper pod that imports a virtual machine image into a PVC when creating a data volume.
+|===
+
+== Network: cluster-network-addons-operator
+The Cluster Network Addons Operator, cluster-network-addons-operator, deploys networking components on a cluster and manages the related resources for extended network functionality.
+
+Cluster Network Addons Operator components
+[cols="1,1"]
+|===
+|*Component* |*Description*
+
+|`deployment/kubemacpool-cert-manager`
+|Manages TLS certificates of Kubemacpool’s webhooks.
+
+|`deployment/kubemacpool-mac-controller-manager`
+|Provides a MAC address pooling service for virtual machine (VM) network interface cards (NICs).
+
+|`daemonset/bridge-marker`
+|Marks network bridges available on nodes as node resources.
+
+|`daemonset/kube-cni-linux-bridge-plugin`
+|Installs Container Network Interface (CNI) plugins on cluster nodes, enabling the attachment of VMs to Linux bridges through network attachment definitions.
+|===
+
+== Scaling: ssp-operator
+The SSP Operator, ssp-operator, deploys the common templates, the related default boot sources, the pipeline tasks, and the template validator.
+
+== Templating: tekton-tasks-operator
+The Tekton Tasks Operator, tekton-tasks-operator, deploys example pipelines showing the usage of OpenShift Pipelines for virtual machines (VMs). This operator also deploys additional OpenShift Pipeline tasks that allow users to create VMs from templates, copy and modify templates, and create data volumes.
+
+Tekton Tasks Operator components
+[cols="1,1"]
+|===
+|*Component* |*Description*
+
+|`deployment/create-vm-from-template`
+|	Creates a VM from a template.
+
+|`deployment/copy-template`
+|	Copies a VM template.
+
+|`deployment/modify-vm-template`
+|	Creates or removes a VM template.
+
+|`deployment/modify-data-object`
+|	Creates or removes data volumes or data sources.
+
+|`deployment/cleanup-vm`
+|	Runs a script or a command on a VM, then stops or deletes the VM afterward.
+
+|`deployment/disk-virt-customize`
+|	Runs a `customize` script on a target persistent volume claim (PVC) using `virt-customize`.
+
+|`deployment/disk-virt-sysprep`
+|	Runs a `sysprep` script on a target PVC by using `virt-sysprep`.
+
+|`deployment/wait-for-vmi-status`
+|	Waits for a specific virtual machine instance (VMI) status, then fails or succeeds according to that status.
+|===
+

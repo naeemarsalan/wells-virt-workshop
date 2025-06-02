@@ -2,10 +2,6 @@
 :toc2:
 :numbered:
 
-== But wait, there's more!
-
-Depending on your role and interests, you might be interested in completing some of the additional modules for this workshop:
-
 === *Virtual machine administrators*
 
 * _Customize Virtual Machines_: One of the most important concepts when running virtual machines is to run the VMs from an existing disk image and also have the capability to customize the VMs.

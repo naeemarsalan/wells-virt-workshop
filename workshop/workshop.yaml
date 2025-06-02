@@ -5,6 +5,7 @@ modules:
     - 01_welcome
     - 02_ocp_basics
     - 03_ocpv_basics
+    - 03.1_ocpv_arch
     - 04_vmware-compare
     - 05_ocpv_customization
     - 06_windows_vm

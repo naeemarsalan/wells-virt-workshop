@@ -15,7 +15,7 @@ modules:
         name: Welcome
     02_ocp_basics:
         name: OpenShift Container Platform Basics
-    03.1_ocpv_arch:
+    03_1_ocpv_arch:
         name: OpenShift Virtualization Architecture
     04_vmware-compare:
         name: "VMware vs. OpenShift Virtualization"

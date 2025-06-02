@@ -15,15 +15,15 @@ modules:
         name: Welcome
     02_ocp_basics:
         name: OpenShift Container Platform Basics
-    03_1_ocpv_arch:
+    03_ocpv_arch:
         name: OpenShift Virtualization Architecture
     04_vmware-compare:
         name: "VMware vs. OpenShift Virtualization"
-    03_ocpv_basics:
+    05_ocpv_basics:
         name: OpenShift Virtualization Basics
-    05_ocpv_customization:
+    06_ocpv_customization:
         name: Customize Virtual Machines
-    06_windows_vm:
+    07_windows_vm:
         name: Windows Virtual Machines
     08_network_management:
         name: 'Network Management'

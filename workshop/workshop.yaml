@@ -4,12 +4,11 @@ modules:
     activate:
     - 01_welcome
     - 02_ocp_basics
-    - 03_ocpv_basics
-    - 03_1_ocpv_arch
+    - 03_ocpv_arch
     - 04_vmware-compare
-    - 05_ocpv_customization
-    - 06_windows_vm
-    - 07_bare_metal
+    - 05_ocpv_basics
+    - 06_ocpv_customization
+    - 07_windows_vm
     - 08_network_management
     - 09_storage_management
     - 10_backup_restore
